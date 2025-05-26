@@ -47,7 +47,7 @@
     </style>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: red !important;">
         <div class="container">
-            <a class="navbar-brand" href="home">Mi Smart Store</a>
+            <a class="navbar-brand" href="home">Mi Smart Store </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,7 +56,7 @@
                 <ul class="navbar-nav m-auto">
                     <c:if test="${sessionScope.account.getRole()==0}">
                         <li class="nav-item">
-                            <a class="nav-link" href="adminaccount">View Account</a>
+                            <a class="nav-link" href="adminaccount">View Accounts</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="manager">Manager Products</a>
