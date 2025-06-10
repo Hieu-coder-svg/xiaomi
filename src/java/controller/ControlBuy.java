@@ -8,7 +8,7 @@ package controller;
 import dal.DAOCategories;
 import dal.DAOOrderDetails;
 import dal.DAOOrders;
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;

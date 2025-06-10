@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -56,7 +56,7 @@ public class ControlDeleteAccount extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         String id1 = request.getParameter("delete");
-        DAOUsers dao = new DAOUsers();
+        daoUsers dao = new daoUsers();
         int id = Integer.parseInt(id1);
         dao.deleteUser(id);
         //List<Users> list = dao.getAllUsers();
@@ -93,7 +93,7 @@ public class ControlDeleteAccount extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        DAOUsers dao = new DAOUsers();
+        daoUsers dao = new daoUsers();
         String name = request.getParameter("name");
         Users u = dao.checkUsers(name);
         List<Users> list = dao.getAllUsersByRole();

@@ -7,12 +7,11 @@ package dal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+
 import model.Products;
 import org.apache.tomcat.dbcp.dbcp2.PoolingConnection;
 
-public class DAOProducts extends DBContext {
+private class DAOProducts extends DBContext {
 
     /*
     private int ProductID;

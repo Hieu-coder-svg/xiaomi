@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 
 import java.io.PrintWriter;
@@ -90,7 +90,7 @@ public class LoginControl extends HttpServlet {
     String username = request.getParameter("user");
     String password = request.getParameter("pass");
     
-    DAOUsers dao = new DAOUsers();
+    daoUsers dao = new daoUsers();
     Users u = dao.Login(username, password);
     
     if (u == null) {

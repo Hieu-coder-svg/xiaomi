@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -73,7 +73,7 @@ public class ChangePassword extends HttpServlet {
         String oldpass = request.getParameter("oldpass");
         String pass = request.getParameter("pass");
         String repass = request.getParameter("repass");
-        DAOUsers dao = new DAOUsers();
+        daoUsers dao = new daoUsers();
         Users u = dao.Login(user, oldpass);
         if (u == null) {
             //old pass incorrect!

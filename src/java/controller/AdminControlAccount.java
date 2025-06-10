@@ -5,7 +5,7 @@
 
 package controller;
 
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -54,7 +54,7 @@ public class AdminControlAccount extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException { //Lấy danh sách người dùng và phân trang dữ liệu.
         //processRequest(request, response);
-        DAOUsers dao = new DAOUsers();
+        daoUsers dao = new daoUsers();
         List<Users> list = dao.getAllUsersByRole();
         request.setAttribute("datauser", list);
         int count = dao.getTotalUsers();
@@ -86,7 +86,7 @@ public class AdminControlAccount extends HttpServlet {
     throws ServletException, IOException {//Tìm kiếm người dùng theo tên từ dữ liệu đầu vào.
         //processRequest(request, response);
         String name = request.getParameter("usersearch");
-        DAOUsers dao = new DAOUsers();
+        daoUsers dao = new daoUsers();
         Users u = dao.checkUsers(name);
         List<Users> list = dao.getAllUsersByRole();
         //request.setAttribute("datauser", list);

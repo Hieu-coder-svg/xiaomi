@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -74,7 +74,7 @@ public class SignupControl extends HttpServlet {
         String password = request.getParameter("pass");
         String repassword = request.getParameter("repass");
         if (password.equals(repassword)) {
-            DAOUsers dao = new DAOUsers();
+            daoUsers dao = new daoUsers();
             Users u = dao.checkUsers(username);
             if (u == null) {
                 //Khong tim thay -> insert new User account

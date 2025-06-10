@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dal.DAOUsers;
+import dal.daoUsers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -58,7 +58,7 @@ public class ControlEditAccount extends HttpServlet {
         //processRequest(request, response);
         String id1 = request.getParameter("edit");
         int id = Integer.parseInt(id1);
-        DAOUsers dao = new DAOUsers();
+        daoUsers dao = new daoUsers();
         Users u = dao.getUserByID(id);
         request.setAttribute("user", u);
         request.getRequestDispatcher("editaccount.jsp").forward(request, response);
@@ -81,7 +81,7 @@ public class ControlEditAccount extends HttpServlet {
         try {
             int role = Integer.parseInt(role1);
             int id = Integer.parseInt(id1);
-            DAOUsers dao = new DAOUsers();
+            daoUsers dao = new daoUsers();
             dao.updateRole(role, id);
 //            List<Users> list = dao.getAllUsers();
             List<Users> list = dao.getAllUsersByRole();
