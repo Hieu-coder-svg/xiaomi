@@ -7,20 +7,15 @@ package dal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Products;
 import org.apache.tomcat.dbcp.dbcp2.PoolingConnection;
 
-private class DAOProducts extends DBContext {
+public class DAOProducts extends DBContext {
 
-    /*
-    private int ProductID;
-    private String ProductName;
-    private double ProductName;
-    private int ProductName;
-    private String ProductName, ImageURL;
-    private Categories Category;
-     */
+    
     //lay ra tat ca san pham
     public List<Products> getAll() {
 

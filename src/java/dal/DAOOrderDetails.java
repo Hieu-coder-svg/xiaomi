@@ -12,7 +12,7 @@ import java.util.List;
 import model.Cart;
 import model.Products;
 
-public class DAoOrderDetails extends DBContext {
+public class DAOOrderDetails extends DBContext {
 
     //get id Product have count max
     public int getProducIdByOrderDetails() {
